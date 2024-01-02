@@ -23,9 +23,9 @@ class Start extends Phaser.Scene {
     game.background = this.add.tileSprite(0, -100, 1300, 1024, "background").setOrigin(0);
 
     // Title
-    game.gameTitle = this.add.text(450, 100, "Lucky Alien", {
+    game.gameTitle = this.add.text(450, 100, "Street Treasure", {
       fontFamily: "kenneyPixel",
-      fontSize: 125,
+      fontSize: 85,
       color: "#fff"
     });
 
@@ -91,11 +91,6 @@ class Start extends Phaser.Scene {
       fontSize: 60,
       color: "#d1d1d1"
     });
-    game.githubOption = this.add.text(630, 441.5, "GitHub", {
-      fontFamily: "kenneyPixel",
-      fontSize: 60,
-      color: "#d1d1d1"
-    });
 
     // Press right to select
     game.selectInstruction = this.add.text(510, 580, "Press right to select", {
@@ -145,19 +140,13 @@ class Start extends Phaser.Scene {
     const RIGHT = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.RIGHT);
 
     if (Phaser.Input.Keyboard.JustDown(DOWN)) {
-      if (game.chooseCursor.selection === "instructions") {
-        game.chooseCursor.selection = "github";
-        game.chooseCursor.y += 60;
-      } else if (game.chooseCursor.selection === "start") {
+      if (game.chooseCursor.selection === "start") {
         game.chooseCursor.selection = "instructions";
         game.chooseCursor.y += 60;
       }
     }
     if (Phaser.Input.Keyboard.JustDown(UP)) {
-      if (game.chooseCursor.selection === "github") {
-        game.chooseCursor.selection = "instructions";
-        game.chooseCursor.y -= 60;
-      } else if (game.chooseCursor.selection === "instructions") {
+      if (game.chooseCursor.selection === "instructions") {
         game.chooseCursor.selection = "start";
         game.chooseCursor.y -= 60;
       }
@@ -179,14 +168,6 @@ class Start extends Phaser.Scene {
       }
     } else {
       game.instructionsOption.setColor("#d1d1d1");
-    }
-    if (game.chooseCursor.selection === "github") {
-      game.githubOption.setColor("#fff");
-      if (Phaser.Input.Keyboard.JustDown(RIGHT)) {
-        open("https://github.com/thcheetah777/luckyalien");
-      }
-    } else {
-      game.githubOption.setColor("#d1d1d1");
     }
   }
 }
