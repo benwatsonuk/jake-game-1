@@ -1,0 +1,35 @@
+{
+  "name": "luckyalien",
+  "version": "1.6.0",
+  "description": "Lucky Alien, Phaser3.js implementation of Adventure Island inspired RPG platformer",
+  "homepage": "https://thcheetah777.github.io/luckyalien/",
+  "main": "config.js",
+  "scripts": {
+    "serve": "serve"
+  },
+  "keywords": [
+    "game",
+    "rpg",
+    "phaser",
+    "platformer",
+    "phaserjs",
+    "phaser3-game"
+  ],
+  "author": "thcheetah777",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thcheetah777/luckyalien"
+  },
+  "bugs": {
+    "url": "https://github.com/thcheetah777/luckyalien/issues/new?assignees=&labels=&template=bug_report.md&title=BUG%3A+"
+  },
+  "devDependencies": {
+    "jshint": "^2.13.0",
+    "sass": "^1.37.5"
+  },
+  "dependencies": {
+    "serve": "^14.2.1",
+    "terser": "^5.7.1"
+  }
+}
