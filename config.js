@@ -19,7 +19,7 @@ const config = {
 	height: 643,
 
   // Color of sky
-  backgroundColor: 0xd0f4f7,
+  backgroundColor: 0x872ddf,
 
   // Physics
   physics: {
@@ -30,7 +30,7 @@ const config = {
     arcade: {
       // Gravity
       gravity: {
-        y: 1500
+        y: 1300
       },
 
       // Options
